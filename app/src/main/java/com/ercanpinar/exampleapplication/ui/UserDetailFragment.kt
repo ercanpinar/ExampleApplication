@@ -1,6 +1,7 @@
 package com.ercanpinar.exampleapplication.ui
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -58,18 +59,16 @@ class UserDetailFragment : Fragment() {
     }
 
     private fun displayError(message: String?) {
-        if (message != null) {
-            Toast.makeText(context, message, Toast.LENGTH_LONG).show()
-        } else {
-            Toast.makeText(context, "Unknown error", Toast.LENGTH_LONG).show()
-        }
+        val errorMessage = message ?: resources.getString(R.string.error_something_went_wrong_message)
+        Toast.makeText(context, errorMessage, Toast.LENGTH_LONG).show()
+        Log.d(TAG, "Error")
     }
 
     private fun displayData(userEntity: UserEntity) = with(binding) {
-        Toast.makeText(context, "Success", Toast.LENGTH_LONG).show()
         nameTextView.text = userEntity.name
         phoneTextView.text = userEntity.phone
         emailTextView.text = userEntity.email
         websiteTextView.text = userEntity.website
+        Log.d(TAG, "Success")
     }
 }

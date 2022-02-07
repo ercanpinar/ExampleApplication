@@ -5,4 +5,6 @@
     <string name="users_page_title">Users</string>
     <string name="user_details_page_title">User Details</string>
     <string name="website">Website:</string>
+    <string name="error_something_went_wrong_message">Something went wrong. Please try again later.</string>
+    <string name="error_unknown_message">Something went wrong. Please try again later.</string>
 </resources>

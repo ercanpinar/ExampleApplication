@@ -61,28 +61,25 @@ class UserListFragment : Fragment() {
                 is Result.Error -> {
                     displayError(result.message)
                 }
-                else -> displayError("Something went wrong")
+                else -> displayError(resources.getString(R.string.error_something_went_wrong_message))
             }
         }
     }
 
     private fun displayError(message: String?) {
         binding.progressBar.hide()
-        if (message != null) {
-            Toast.makeText(context, message, Toast.LENGTH_LONG).show()
-        } else {
-            Toast.makeText(context, "Unknown error", Toast.LENGTH_LONG).show()
-        }
+        val errorMessage = message ?: resources.getString(R.string.error_something_went_wrong_message)
+        Toast.makeText(context, errorMessage, Toast.LENGTH_LONG).show()
+        Log.d(TAG, "Error")
     }
 
     private fun displayData(data: List<User>, isFromCache: Boolean = false) = with(binding) {
         progressBar.hide()
         if (isFromCache) {
-            Toast.makeText(context, "Cached Data", Toast.LENGTH_LONG).show()
+            Log.d(TAG, "Success Cached Data")
         } else {
-            Toast.makeText(context, "Success Fresh Data", Toast.LENGTH_LONG).show()
+            Log.d(TAG, "Success Fresh Data")
         }
-
         userListRecyclerView.visibility = View.VISIBLE
         userAdapter = UserAdapter(getUserListCards(data, ::cardClickListener))
         userListRecyclerView.apply {
@@ -95,10 +92,11 @@ class UserListFragment : Fragment() {
     private fun displayLoading() = with(binding) {
         progressBar.show()
         userListRecyclerView.visibility = View.GONE
+        Log.d(TAG, "Loading")
     }
 
     private fun cardClickListener(userCardVO: UserCardVO) {
-        Log.d(TAG, "cardClickListener: User Clicked: ${userCardVO.data.name}")
+        Log.d(TAG, "User Clicked: ${userCardVO.data.name}")
         findNavController().navigateWithAnim(
             R.id.action_userListFragment_to_userDetailFragment,
             bundleOf(getString(R.string.arg_user_id) to userCardVO.data.id)
