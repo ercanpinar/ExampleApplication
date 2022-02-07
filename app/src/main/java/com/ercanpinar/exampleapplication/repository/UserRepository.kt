@@ -18,7 +18,7 @@ class UserRepository @Inject constructor(
     private val userDao: UserDao
 ) : Repository {
     companion object {
-        const val TAG = "UserRepository_TAG"
+        const val TAG = "UserRepository"
     }
 
     suspend fun getUserDbData(userId: Int) = flow {

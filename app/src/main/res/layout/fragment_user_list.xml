@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     style="@style/MatchParentLayout"
     android:orientation="vertical"
-    android:background="@android:color/darker_gray"
     android:padding="8dp">
 
     <androidx.recyclerview.widget.RecyclerView
