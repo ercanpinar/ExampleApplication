@@ -1,7 +1,6 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
-    id 'kotlin-android-extensions'
     id 'kotlin-kapt'
     id 'kotlinx-serialization'
     id 'dagger.hilt.android.plugin'
@@ -40,54 +39,55 @@ android {
 }
 
 dependencies {
-    implementation 'androidx.core:core-ktx:1.7.0'
-    implementation 'androidx.appcompat:appcompat:1.4.1'
-    implementation 'com.google.android.material:material:1.5.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    implementation "androidx.core:core-ktx:$ktxCoreVersion"
+    implementation "androidx.appcompat:appcompat:$appCompatVersion"
+    implementation "com.google.android.material:material:$materialDesignVersion"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinxCoroutineVersion"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlinxCoroutineVersion"
 
     // Hilt
-    implementation 'com.google.dagger:hilt-android:2.38.1'
+    implementation "com.google.dagger:hilt-android:$hiltVersion"
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    kapt 'com.google.dagger:hilt-android-compiler:2.38.1'
+    kapt "com.google.dagger:hilt-android-compiler:$hiltVersion"
 
     // Retrofit
-    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
-    implementation("com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0")
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$gsonConverterVersion"
+    implementation "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:$kotlinxSerializationConverterVersion"
 
     // Kotlin
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.0-alpha01' //nav_version
-    implementation 'androidx.navigation:navigation-ui-ktx:2.5.0-alpha01'    //nav_version
+    implementation "androidx.navigation:navigation-fragment-ktx:$navCompVersion"
+    implementation "androidx.navigation:navigation-ui-ktx:$navCompVersion"
 
     // ViewModel
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.0-alpha01") // lifecycle_version
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
 
     // LiveData
-    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.5.0-alpha01") // lifecycle_version
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion"
 
     // Saved state module for ViewModel
-    implementation("androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.0-alpha01")
-    //lifecycle_version
-
+    implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycleVersion"
 
     // Room
-    implementation "androidx.room:room-runtime:2.4.1"
-    kapt "androidx.room:room-compiler:2.4.1"
+    implementation "androidx.room:room-runtime:$roomVersion"
+    kapt "androidx.room:room-compiler:$roomVersion"
 
     // Kotlin Extensions and Coroutines support for Room
-    implementation "androidx.room:room-ktx:2.4.1"
-
-    implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:1.0.1"
-
-    // optional - Test helpers for LiveData
-    testImplementation("androidx.arch.core:core-testing:2.1.0") //arch_version
+    implementation "androidx.room:room-ktx:$roomVersion"
 
     // Testing Navigation
-    androidTestImplementation 'androidx.navigation:navigation-testing:2.5.0-alpha01' //nav_version
-
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    testImplementation "junit:junit:$junitVersion"
+    testImplementation "androidx.test:core:$androidxTestVersion"
+    testImplementation "androidx.room:room-testing:$roomVersion"
+    testImplementation "androidx.arch.core:core-testing:$archCompTestVersion"
+    testImplementation "org.jetbrains.kotlin:kotlin-test-junit:$kotlinVersion"
+    testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockitoKotlinVersion"
+    testImplementation "io.mockk:mockk:$mockkVersion"
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutineTestVersion"
+    androidTestImplementation "androidx.test.ext:junit:$extJunitTestVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreTestVersion"
+    androidTestImplementation "androidx.navigation:navigation-testing:$navCompVersion"
 }
 
 kapt {
