@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Example Application</string>
+    <string name="phone">Phone:</string>
+    <string name="email">Email:</string>
+    <string name="users_page_title">Users</string>
+    <string name="user_details_page_title">User Details</string>
+    <string name="website">Website:</string>
+</resources>

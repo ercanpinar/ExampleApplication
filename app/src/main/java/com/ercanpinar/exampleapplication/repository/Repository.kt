@@ -1,0 +1,3 @@
+package com.ercanpinar.exampleapplication.repository
+
+interface Repository

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/MatchParentLayout.ScreenPadded"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/nameTextView"
+        style="@style/SectionLayout"
+        android:layout_marginTop="@dimen/padding8dp"
+        android:padding="@dimen/padding8dp"
+        android:textColor="@android:color/black"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Ercan Pinar" />
+
+    <View
+        android:id="@+id/nameDividerView"
+        style="@style/DividerViewStyle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/nameTextView"
+        app:layout_constraintTop_toBottomOf="@id/nameTextView" />
+
+    <TextView
+        android:id="@+id/phoneTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:accessibilityHeading="true"
+        android:text="@string/phone"
+        android:textColor="@android:color/secondary_text_light"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/nameTextView"
+        tools:targetApi="p" />
+
+    <TextView
+        android:id="@+id/phoneTextView"
+        style="@style/SectionLayout"
+        android:layout_marginTop="@dimen/padding4dp"
+        android:textColor="@android:color/secondary_text_light"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@id/phoneTitleTextView"
+        app:layout_constraintTop_toBottomOf="@id/phoneTitleTextView"
+        tools:text="0400123456" />
+
+    <TextView
+        android:id="@+id/emailTitleTextView"
+        style="@style/WrapContentLayout"
+        android:layout_marginTop="@dimen/padding12dp"
+        android:accessibilityHeading="true"
+        android:text="@string/email"
+        android:textColor="@android:color/secondary_text_light"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/phoneTextView"
+        tools:targetApi="p" />
+
+    <TextView
+        android:id="@+id/emailTextView"
+        style="@style/SectionLayout"
+        android:layout_marginTop="@dimen/padding4dp"
+        android:textColor="@android:color/secondary_text_light"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/emailTitleTextView"
+        app:layout_constraintTop_toBottomOf="@id/emailTitleTextView"
+        tools:text="user@g.com" />
+
+    <TextView
+        android:id="@+id/websiteTitleTextView"
+        style="@style/WrapContentLayout"
+        android:layout_marginTop="@dimen/padding12dp"
+        android:accessibilityHeading="true"
+        android:text="@string/website"
+        android:textColor="@android:color/secondary_text_light"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/emailTextView"
+        tools:targetApi="p" />
+
+    <TextView
+        android:id="@+id/websiteTextView"
+        style="@style/SectionLayout"
+        android:layout_marginTop="@dimen/padding4dp"
+        android:textColor="@android:color/secondary_text_light"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/websiteTitleTextView"
+        app:layout_constraintTop_toBottomOf="@id/websiteTitleTextView"
+        tools:text="www.google.com" />
+</androidx.constraintlayout.widget.ConstraintLayout>
