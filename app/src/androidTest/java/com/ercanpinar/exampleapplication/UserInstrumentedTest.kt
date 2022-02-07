@@ -21,7 +21,7 @@ import org.junit.runner.RunWith
  */
 @RunWith(AndroidJUnit4::class)
 @LargeTest
-class UserListAndDetailUITest {
+class UserInstrumentedTest {
     /**
      * Use [ActivityScenario] to create and launch the activity under test. This is a
      * replacement for [androidx.test.rule.ActivityTestRule].
