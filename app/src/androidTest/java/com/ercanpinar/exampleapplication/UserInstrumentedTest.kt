@@ -17,7 +17,7 @@ import org.junit.runner.RunWith
 
 
 /**
- * Test class showcasing some [RecyclerViewActions] from Espresso.
+ * Test class showcasing some User List and User Detail Actions from Espresso.
  */
 @RunWith(AndroidJUnit4::class)
 @LargeTest
