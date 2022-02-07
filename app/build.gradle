@@ -76,15 +76,15 @@ dependencies {
     // Kotlin Extensions and Coroutines support for Room
     implementation "androidx.room:room-ktx:$roomVersion"
 
-    // Testing Navigation
+    // Test
     testImplementation "junit:junit:$junitVersion"
     testImplementation "androidx.test:core:$androidxTestVersion"
     testImplementation "androidx.room:room-testing:$roomVersion"
     testImplementation "androidx.arch.core:core-testing:$archCompTestVersion"
     testImplementation "org.jetbrains.kotlin:kotlin-test-junit:$kotlinVersion"
-    testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockitoKotlinVersion"
-    testImplementation "io.mockk:mockk:$mockkVersion"
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutineTestVersion"
+    testImplementation "org.mockito:mockito-inline:3.11.2"
+    testImplementation "org.mockito:mockito-core:3.11.2"
     androidTestImplementation "androidx.test.ext:junit:$extJunitTestVersion"
     androidTestImplementation "androidx.test:runner:$runnerVersion"
     androidTestImplementation "androidx.test:rules:$rulesVersion"
