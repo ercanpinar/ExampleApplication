@@ -65,7 +65,7 @@ class UserDetailFragment : Fragment() {
     }
 
     private fun displayData(userEntity: UserEntity) = with(binding) {
-        nameTextView.text = userEntity.name
+        userNameTextView.text = userEntity.name
         phoneTextView.text = userEntity.phone
         emailTextView.text = userEntity.email
         websiteTextView.text = userEntity.website

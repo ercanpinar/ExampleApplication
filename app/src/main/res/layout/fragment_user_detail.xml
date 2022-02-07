@@ -6,7 +6,7 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/nameTextView"
+        android:id="@+id/userNameTextView"
         style="@style/SectionLayout"
         android:layout_marginTop="@dimen/padding8dp"
         android:padding="@dimen/padding8dp"
@@ -20,8 +20,8 @@
         android:id="@+id/nameDividerView"
         style="@style/DividerViewStyle"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@id/nameTextView"
-        app:layout_constraintTop_toBottomOf="@id/nameTextView" />
+        app:layout_constraintStart_toStartOf="@id/userNameTextView"
+        app:layout_constraintTop_toBottomOf="@id/userNameTextView" />
 
     <TextView
         android:id="@+id/phoneTitleTextView"
@@ -33,7 +33,7 @@
         android:textSize="22sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/nameTextView"
+        app:layout_constraintTop_toBottomOf="@id/nameDividerView"
         tools:targetApi="p" />
 
     <TextView

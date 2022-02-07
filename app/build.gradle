@@ -86,7 +86,10 @@ dependencies {
     testImplementation "io.mockk:mockk:$mockkVersion"
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutineTestVersion"
     androidTestImplementation "androidx.test.ext:junit:$extJunitTestVersion"
+    androidTestImplementation "androidx.test:runner:$runnerVersion"
+    androidTestImplementation "androidx.test:rules:$rulesVersion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espressoCoreTestVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-contrib:$espressoCoreTestVersion"
     androidTestImplementation "androidx.navigation:navigation-testing:$navCompVersion"
 }
 
