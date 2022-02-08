@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/userItemCardView"
     style="@style/SectionLayout"
-    android:background="@color/material_on_primary_emphasis_medium"
     android:layout_margin="@dimen/padding8dp"
     android:elevation="@dimen/padding8dp"
     android:importantForAccessibility="yes"
