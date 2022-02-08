@@ -1,4 +1,4 @@
-package com.ercanpinar.exampleapplication.data.model.user
+package com.ercanpinar.exampleapplication.data.model
 
 import kotlinx.serialization.Serializable
 

@@ -12,7 +12,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ercanpinar.exampleapplication.R
-import com.ercanpinar.exampleapplication.data.model.user.User
+import com.ercanpinar.exampleapplication.data.model.User
 import com.ercanpinar.exampleapplication.data.util.Result
 import com.ercanpinar.exampleapplication.databinding.FragmentUserListBinding
 import com.ercanpinar.exampleapplication.navigateWithAnim

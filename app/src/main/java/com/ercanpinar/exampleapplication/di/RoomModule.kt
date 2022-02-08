@@ -2,8 +2,8 @@ package com.ercanpinar.exampleapplication.di
 
 import android.content.Context
 import androidx.room.Room
-import com.ercanpinar.exampleapplication.data.local.user.UserDao
-import com.ercanpinar.exampleapplication.data.local.user.UserDatabase
+import com.ercanpinar.exampleapplication.data.local.UserDao
+import com.ercanpinar.exampleapplication.data.local.UserDatabase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

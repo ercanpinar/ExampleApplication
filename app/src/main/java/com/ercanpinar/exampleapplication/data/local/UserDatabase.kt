@@ -1,4 +1,4 @@
-package com.ercanpinar.exampleapplication.data.local.user
+package com.ercanpinar.exampleapplication.data.local
 
 import androidx.room.Database
 import androidx.room.RoomDatabase

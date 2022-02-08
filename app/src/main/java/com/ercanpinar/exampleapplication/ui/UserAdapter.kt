@@ -3,7 +3,7 @@ package com.ercanpinar.exampleapplication.ui
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.ercanpinar.exampleapplication.data.model.user.User
+import com.ercanpinar.exampleapplication.data.model.User
 import com.ercanpinar.exampleapplication.databinding.ItemUserBinding
 
 class UserAdapter(

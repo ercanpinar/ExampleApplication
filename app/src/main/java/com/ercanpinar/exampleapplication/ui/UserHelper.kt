@@ -1,6 +1,6 @@
 package com.ercanpinar.exampleapplication.ui
 
-import com.ercanpinar.exampleapplication.data.model.user.User
+import com.ercanpinar.exampleapplication.data.model.User
 
 object UserHelper {
 

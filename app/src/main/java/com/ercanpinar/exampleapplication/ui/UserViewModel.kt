@@ -5,8 +5,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.ercanpinar.exampleapplication.data.local.user.UserEntity
-import com.ercanpinar.exampleapplication.data.model.user.User
+import com.ercanpinar.exampleapplication.data.local.UserEntity
+import com.ercanpinar.exampleapplication.data.model.User
 import com.ercanpinar.exampleapplication.data.util.Result
 import com.ercanpinar.exampleapplication.repository.UserRepository
 import dagger.hilt.android.lifecycle.HiltViewModel

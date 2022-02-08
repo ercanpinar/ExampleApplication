@@ -1,9 +1,8 @@
 package com.ercanpinar.exampleapplication.repository
 
-import android.util.Log
-import com.ercanpinar.exampleapplication.data.local.user.UserDao
-import com.ercanpinar.exampleapplication.data.local.user.UserEntity
-import com.ercanpinar.exampleapplication.data.model.user.User
+import com.ercanpinar.exampleapplication.data.local.UserDao
+import com.ercanpinar.exampleapplication.data.local.UserEntity
+import com.ercanpinar.exampleapplication.data.model.User
 import com.ercanpinar.exampleapplication.data.remote.UserApi
 import com.ercanpinar.exampleapplication.data.util.Result
 import kotlinx.coroutines.Dispatchers
@@ -17,9 +16,6 @@ class UserRepository @Inject constructor(
     private val userApi: UserApi,
     private val userDao: UserDao
 ) : Repository {
-    companion object {
-        const val TAG = "UserRepository"
-    }
 
     suspend fun getUserDbData(userId: Int) = flow {
         try {
@@ -36,23 +32,18 @@ class UserRepository @Inject constructor(
             val userData = userApi.getUsers()
             val isSuccess = !userData.isNullOrEmpty()
             if (isSuccess) {
-                Log.d(TAG, "GET USER DATA: NetworkResponse status Success")
                 saveDataToDb(userData)
                 emit(Result.Success(userData))
             } else {
-                Log.d(TAG, "GET USER DATA: NetworkResponse status Error - Trying Cached")
                 // Return cached data if there is any
                 emit(Result.SuccessCached(emptyList()))
             }
         } catch (e: Exception) {
-            Log.d(TAG, "GET USER DATA: NetworkResponse status Error")
-            Log.e(TAG, "getUsers: error Message: ${e.message}")
             emit(Result.Error("Something went wrong. Please try again later."))
         }
     }
 
     private suspend fun saveDataToDb(userList: List<User>) = with(Dispatchers.IO) {
-        Log.d(TAG, "saveDataToDb: list size: ${userList.size}")
         userList.map {
             UserEntity(
                 id = it.id,
@@ -63,11 +54,11 @@ class UserRepository @Inject constructor(
             )
 
         }.let {
-            Log.d(TAG, "saveDataToDb: entity size: ${it.size}")
             userDao.insertAllUserItem(it)
         }
     }
 
+    // TODO Implement GetUser cached data usage
     private suspend fun readUserDataFromDb() = with(Dispatchers.IO) {
         val userList = mutableListOf<User>()
         userDao.getUserData().map {
@@ -87,9 +78,7 @@ class UserRepository @Inject constructor(
         return@with
     }
 
-
     private suspend fun getUserDetailDbData(userId: Int) = userDao.getUserById(userId)
-
 }
 
 

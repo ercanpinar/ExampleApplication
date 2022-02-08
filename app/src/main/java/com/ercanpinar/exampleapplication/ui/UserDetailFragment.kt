@@ -9,7 +9,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.ercanpinar.exampleapplication.R
-import com.ercanpinar.exampleapplication.data.local.user.UserEntity
+import com.ercanpinar.exampleapplication.data.local.UserEntity
 import com.ercanpinar.exampleapplication.data.util.Result
 import com.ercanpinar.exampleapplication.databinding.FragmentUserDetailBinding
 import dagger.hilt.android.AndroidEntryPoint

@@ -36,6 +36,9 @@ android {
     kotlinOptions {
         jvmTarget = '11'
     }
+    testOptions {
+        unitTests.includeAndroidResources = true
+    }
 }
 
 dependencies {
@@ -49,6 +52,7 @@ dependencies {
     // Hilt
     implementation "com.google.dagger:hilt-android:$hiltVersion"
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation "junit:junit:$junitVersion"
     kapt "com.google.dagger:hilt-android-compiler:$hiltVersion"
 
     // Retrofit
@@ -59,6 +63,7 @@ dependencies {
     // Kotlin
     implementation "androidx.navigation:navigation-fragment-ktx:$navCompVersion"
     implementation "androidx.navigation:navigation-ui-ktx:$navCompVersion"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutineTestVersion"
 
     // ViewModel
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
@@ -81,10 +86,10 @@ dependencies {
     testImplementation "androidx.test:core:$androidxTestVersion"
     testImplementation "androidx.room:room-testing:$roomVersion"
     testImplementation "androidx.arch.core:core-testing:$archCompTestVersion"
-    testImplementation "org.jetbrains.kotlin:kotlin-test-junit:$kotlinVersion"
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutineTestVersion"
     testImplementation "org.mockito:mockito-inline:3.11.2"
     testImplementation "org.mockito:mockito-core:3.11.2"
+    testImplementation "org.hamcrest:hamcrest:2.2"
     androidTestImplementation "androidx.test.ext:junit:$extJunitTestVersion"
     androidTestImplementation "androidx.test:runner:$runnerVersion"
     androidTestImplementation "androidx.test:rules:$rulesVersion"

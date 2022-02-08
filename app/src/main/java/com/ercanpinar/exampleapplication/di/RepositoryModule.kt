@@ -1,6 +1,6 @@
 package com.ercanpinar.exampleapplication.di
 
-import com.ercanpinar.exampleapplication.data.local.user.UserDao
+import com.ercanpinar.exampleapplication.data.local.UserDao
 import com.ercanpinar.exampleapplication.data.remote.UserApi
 import com.ercanpinar.exampleapplication.repository.UserRepository
 import dagger.Module
